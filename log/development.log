@@ -3880,3 +3880,99 @@ Processing by TimelineController#index as HTML
 Completed 200 OK in 131ms (Views: 115.6ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/" for ::1 at 2017-01-18 11:46:37 -0800
+Processing by TimelineController#index as HTML
+  Rendering timeline/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.9ms)[0m  [1m[34mSELECT "people".* FROM "people" ORDER BY birth[0m
+  Rendered timeline/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 203ms (Views: 196.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 11:47:42 -0800
+Processing by TimelineController#index as HTML
+  Rendering timeline/index.html.erb within layouts/application
+  [1m[36mPerson Load (2.0ms)[0m  [1m[34mSELECT "people".* FROM "people" ORDER BY birth[0m
+  Rendered timeline/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 43ms (Views: 38.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 11:48:59 -0800
+Processing by TimelineController#index as HTML
+  Rendering timeline/index.html.erb within layouts/application
+  [1m[36mPerson Load (1.7ms)[0m  [1m[34mSELECT "people".* FROM "people" ORDER BY birth[0m
+  Rendered timeline/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 102ms (Views: 98.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 11:49:04 -0800
+Processing by TimelineController#index as HTML
+  Rendering timeline/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.5ms)[0m  [1m[34mSELECT "people".* FROM "people" ORDER BY birth[0m
+  Rendered timeline/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 11:49:51 -0800
+Processing by TimelineController#index as HTML
+  Rendering timeline/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT "people".* FROM "people" ORDER BY birth[0m
+  Rendered timeline/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 75ms (Views: 72.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 11:50:24 -0800
+Processing by TimelineController#index as HTML
+  Rendering timeline/index.html.erb within layouts/application
+  [1m[36mPerson Load (2.8ms)[0m  [1m[34mSELECT "people".* FROM "people" ORDER BY birth[0m
+  Rendered timeline/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 81ms (Views: 76.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 11:52:42 -0800
+Processing by TimelineController#index as HTML
+  Rendering timeline/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT "people".* FROM "people" ORDER BY birth[0m
+  Rendered timeline/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 79ms (Views: 76.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 11:53:03 -0800
+Processing by TimelineController#index as HTML
+  Rendering timeline/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.9ms)[0m  [1m[34mSELECT "people".* FROM "people" ORDER BY birth[0m
+  Rendered timeline/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 89ms (Views: 86.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 11:53:09 -0800
+Processing by TimelineController#index as HTML
+  Rendering timeline/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT "people".* FROM "people" ORDER BY birth[0m
+  Rendered timeline/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 11:53:24 -0800
+Processing by TimelineController#index as HTML
+  Rendering timeline/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.5ms)[0m  [1m[34mSELECT "people".* FROM "people" ORDER BY birth[0m
+  Rendered timeline/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 79ms (Views: 77.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 12:58:18 -0800
+Processing by TimelineController#index as HTML
+  Rendering timeline/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.9ms)[0m  [1m[34mSELECT "people".* FROM "people" ORDER BY birth[0m
+  Rendered timeline/index.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 99ms (Views: 88.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 13:01:52 -0800
+Processing by TimelineController#index as HTML
+  Rendering timeline/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.7ms)[0m  [1m[34mSELECT "people".* FROM "people" ORDER BY birth[0m
+  Rendered timeline/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 63ms (Views: 57.3ms | ActiveRecord: 0.7ms)
+
+
