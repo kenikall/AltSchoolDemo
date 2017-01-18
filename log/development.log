@@ -3863,3 +3863,12 @@ Processing by TimelineController#index as HTML
 Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for ::1 at 2017-01-18 09:32:43 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TimelineController#index as HTML
+  Rendering timeline/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.7ms)[0m  [1m[34mSELECT "people".* FROM "people" ORDER BY birth[0m
+  Rendered timeline/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 472ms (Views: 457.8ms | ActiveRecord: 3.2ms)
+
+
