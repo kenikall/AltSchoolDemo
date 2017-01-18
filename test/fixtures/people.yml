@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  birth: 1
+  death: 1
+  summary: 1
+
+two:
+  name: MyString
+  birth: 1
+  death: 1
+  summary: 1
