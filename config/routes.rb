@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'timeline/index'
   root 'timeline#index'
+  get 'timeline/index'
 end
