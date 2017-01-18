@@ -42,11 +42,10 @@ $(document).ready(function(){
     var tableString = '<table><tr><td>';
     var leftMargin = 0;
     for (var k = 0; k < rows[i].length; k++) {
-      if(rows[i][k].death !== 2017){
-        tableString += '<div content="'+rows[i][k].summary+'"; class="life-span" style="width:'+((rows[i][k].death-rows[i][k].birth)*increment)+'px; position: absolute; left:'+((rows[i][k].birth*increment)+barStart)+'px" >'+ rows[i][k].name+' '+rows[i][k].birth+'-'+rows[i][k].death+'</div>';
-      }else{
-        tableString += '<div content="'+rows[i][k].sumary+'"; class="life-span" style="border-radius:10px 0px 0px 10px; width:'+((rows[i][k].death-rows[i][k].birth)*increment)+'px; position: absolute; left:'+((rows[i][k].birth*increment)+barStart)+'px" >'+ rows[i][k].name+' '+rows[i][k].birth+'-'+rows[i][k].death+'</div>';
-      }
+      tableString += '<div id="life-span'+i+k+'" class="life-span" style="';
+      if(rows[i][k].death === 2017){ tableString += 'border-radius:10px 0px 0px 10px; ' }
+      tableString += 'width:'+((rows[i][k].death-rows[i][k].birth)*increment)+'px; position: absolute; left:'+((rows[i][k].birth*increment)+barStart)+'px" >'+ rows[i][k].name+' '+rows[i][k].birth+'-'+rows[i][k].death+'</div><div id="summary'+i+k+'" class="summary"><p>'+rows[i][k].summary+'</p></div>';
+
     }
     tableString+'<td></tr></table>';
     $('#display-lifespan').append(tableString);
@@ -59,47 +58,4 @@ $(document).ready(function(){
     var id = $(this).attr('id').match(/\d+/)[0];
     $('#year'+id).hide();
   })
-  // for (var i = 0; i < rows.length; i++) {
-  //   var tableString = '<table><tr>';
-  //   var leftMargin = 0;
-  //   for (var k = 0; k < rows[i].length; k++) {
-  //     leftMargin+=(rows[i][k].birth*increment+barLeft);
-  //     tableString += '<td style="width:'+(rows[i][k].death-rows[i][k].birth*increment/barLength)+'px; margin-left:'+leftMargin+'px">'+rows[i][k].name+' '+ rows[i][k].birth+'-'+rows[i][k].death+'<td>';
-  //     leftMargin-=(rows[i][k].birth*increment+barLeft)+(rows[i][k].death-rows[i][k].birth*increment/barLength);
-  //   }
-  //   tableString+'</tr></table>';
-  //   $('#display-lifespan').append(tableString);
-  // }
-
-  // $('#rows').append(entries);
-  // var entries = document.createDocumentFragment();
-  // var count = 0;
-  // for (var i = 0; i < 1; i++) {
-  //   for (var k = 0; k < rows[i].length; k++) {
-  //     count ++;
-  //     var timelineEntry = document.createElement('div')
-  //     timelineEntry.className = 'entryDiv';
-  //     timelineEntry.id = 'entryDiv'+count;
-  //     $('#entryDiv'+count).css({
-  //       width: (rows[i][k].death-rows[i][k].birth*increment/barLength)+'px',
-  //       left: (rows[i][k].birth*increment+barLeft)+'px',
-  //       top: (barTop+50+50*i)+'px'
-  //     })
-  //     console.log($('entryDiv'+count).css)
-  //     $('#entryDiv'+count).text('<div>'+rows[i][k].name+' '+ rows[i][k].birth+'-'+rows[i][k].death+'</div>')
-  //     entries.appendChild(timelineEntry);
-  //   }
-  // }
-  // $('#rows').append(entries);
-
-  // for (var i = 0; i < rows.length; i++) {
-  //   var testString = '<li>';
-  //   for (var k = 0; k < rows[i].length; k++) {
-  //     testString += rows[i][k].name+' '+rows[i][k].birth+' '+rows[i][k].death+' '
-  //   }
-  //   testString += '</li>'
-  //   $('#entries').append(testString);
-  // }
-  // console.log(increment);
-
 })

@@ -58,6 +58,6 @@ JSON.parse(data).each do |entry|
   p.name = entry.fetch('name')
   p.birth = entry.fetch('birth')
   p.death = entry.fetch('death') == -1 ? Time.zone.now.year : entry.fetch('death')
-  p.summary = entry.fetch('summary')
+  p.summary = entry.fetch('summary').gsub!("\'", "")
   p.save!
 end

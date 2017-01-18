@@ -56,7 +56,7 @@
   height: 100%;
   position: fixed;
   top: 0;
-  border-left: 1px solid black;
+  border-left: 2px solid black;
   opacity: 0.5;
   z-index: 1;
 }
@@ -65,11 +65,11 @@
   text-align: center;
   background: SteelBlue;
   font-family: 'Verdana', Geneva, sans-serif;
-  // font-size: 10%;
   color: Gainsboro;
   border-radius : 10px;
   height: 40px;
   z-index: 3;
+  transition: all .2s ease-out;
 }
 tr{
   height: 50px
@@ -86,4 +86,19 @@ tr{
   border: 3px solid black;
   z-index: 5;
   font-size: 80%;
+}
+.summary{
+  display: none;
+  text-align: center;
+  opacity: 0;
+  transition: all .2s ease-out;
+}
+.summary .current{
+  display: inline-block;
+  opacity: 1;
+}
+
+.life-span .current{
+  width: 350px;
+  height: 400px;
 }
