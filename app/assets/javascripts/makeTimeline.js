@@ -1,6 +1,16 @@
 $(document).ready(function(){
   //get data
+  // $.ajax({
+  //   type: 'GET',
+  //   dataType: "json",
+  //   url: $('code').attr('people-list'),
+  //   data: data,
+  //   success: success
+  // });
+
   peopleList = JSON.parse($('code').attr('people-list'));
+  console.log(peopleList);
+
   //set up timeline
   var firstYear = peopleList[0].birth;
   var lastYear = new Date().getFullYear();
@@ -17,7 +27,7 @@ $(document).ready(function(){
       if (i%100 === 0){ lineString += 'class="century-line decade-line">' }
       else{ lineString += 'class="decade-line"></div>' }
       $('body').append(lineString);
-      var dateString = '<div id="year'+i+'" class="years" style="left: '+(i*increment+barStart-16)+'px"><p>'+i+'</p><div>';
+      var dateString = '<div id="year'+i+'" class="years" style="left: '+(i*increment+barStart-$('.years').width()/2)+'px"><p>'+i+'</p><div>';
       $('body').append(dateString);
     }
   }
@@ -43,9 +53,8 @@ $(document).ready(function(){
     var leftMargin = 0;
     for (var k = 0; k < rows[i].length; k++) {
       tableString += '<div id="life-span'+i+k+'" class="life-span" style="';
-      if(rows[i][k].death === 2017){ tableString += 'border-radius:10px 0px 0px 10px; ' }
-      tableString += 'width:'+((rows[i][k].death-rows[i][k].birth)*increment)+'px; position: absolute; left:'+((rows[i][k].birth*increment)+barStart)+'px" >'+ rows[i][k].name+' '+rows[i][k].birth+'-'+rows[i][k].death+'</div><div id="summary'+i+k+'" class="summary"><p>'+rows[i][k].summary+'</p></div>';
-
+      if(rows[i][k].death === 2017){ tableString += 'border-radius:10px 0px 0px 10px; width:'+((rows[i][k].death-rows[i][k].birth)*increment)+'px; position: absolute; left:'+((rows[i][k].birth*increment)+barStart)+'px" >'+ rows[i][k].name+' '+rows[i][k].birth+'- </div><div id="summary'+i+k+'" class="summary"><p>'+rows[i][k].summary+'</p></div>'; }
+      else{ tableString += 'width:'+((rows[i][k].death-rows[i][k].birth)*increment)+'px; position: absolute; left:'+((rows[i][k].birth*increment)+barStart)+'px" >'+ rows[i][k].name+' '+rows[i][k].birth+'-'+rows[i][k].death+'</div><div id="summary'+i+k+'" class="summary"><p>'+rows[i][k].summary+'</p></div>';}
     }
     tableString+'<td></tr></table>';
     $('#display-lifespan').append(tableString);
