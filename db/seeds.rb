@@ -54,10 +54,10 @@ data = <<HERE
 HERE
 Person.delete_all
 JSON.parse(data).each do |entry|
-  p = Person.new
-  p.name = entry.fetch('name')
-  p.birth = entry.fetch('birth')
-  p.death = entry.fetch('death') == -1 ? Time.zone.now.year : entry.fetch('death')
-  p.summary = entry.fetch('summary').gsub!("\'", "")
-  p.save!
+  person = Person.new
+  person.name = entry.fetch('name')
+  person.birth = entry.fetch('birth')
+  person.death = entry.fetch('death') == -1 ? Time.zone.now.year : entry.fetch('death')
+  person.summary = entry.fetch('summary').gsub!("\'", "")
+  person.save!
 end
