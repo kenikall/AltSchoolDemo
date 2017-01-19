@@ -4178,3 +4178,11 @@ Processing by TimelineController#index as HTML
 Completed 200 OK in 64ms (Views: 35.1ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/" for ::1 at 2017-01-18 18:58:07 -0800
+Processing by TimelineController#index as HTML
+  [1m[36mPerson Load (0.7ms)[0m  [1m[34mSELECT "people".* FROM "people" ORDER BY birth[0m
+  Rendering timeline/index.html.erb within layouts/application
+  Rendered timeline/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 57ms (Views: 40.7ms | ActiveRecord: 0.7ms)
+
+
