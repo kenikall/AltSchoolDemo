@@ -9,7 +9,6 @@ $(document).ready(function(){
   // });
 
   peopleList = JSON.parse($('code').attr('people-list'));
-  console.log(peopleList);
 
   //set up timeline
   var firstYear = peopleList[0].birth;
@@ -52,7 +51,7 @@ $(document).ready(function(){
     var tableString = '<table><tr><td>';
     var leftMargin = 0;
     for (var k = 0; k < rows[i].length; k++) {
-      tableString += '<div id="life-span'+i+k+'" class="life-span" style="';
+      tableString += '<div id="lifespan'+i+k+'" class="lifespan" style="';
       if(rows[i][k].death === 2017){ tableString += 'border-radius:10px 0px 0px 10px; width:'+((rows[i][k].death-rows[i][k].birth)*increment)+'px; position: absolute; left:'+((rows[i][k].birth*increment)+barStart)+'px" >'+ rows[i][k].name+' '+rows[i][k].birth+'- </div><div id="summary'+i+k+'" class="summary"><p>'+rows[i][k].summary+'</p></div>'; }
       else{ tableString += 'width:'+((rows[i][k].death-rows[i][k].birth)*increment)+'px; position: absolute; left:'+((rows[i][k].birth*increment)+barStart)+'px" >'+ rows[i][k].name+' '+rows[i][k].birth+'-'+rows[i][k].death+'</div><div id="summary'+i+k+'" class="summary"><p>'+rows[i][k].summary+'</p></div>';}
     }
